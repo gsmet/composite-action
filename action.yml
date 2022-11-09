@@ -1,0 +1,9 @@
+name: 'Test output commands'
+description: 'Test output commands with GITHUB_OUTPUT and set-output'
+runs:
+  using: "composite"
+  steps:
+    - run: echo "output1=test output 1 with GITHUB_OUTPUT" >> $GITHUB_OUTPUT
+      shell: bash
+    - run: echo "::set-output name=output2::test output 2 with set-output"
+      shell: bash
